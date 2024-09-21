@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+p::first-letter {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: brown;
+}
+
+ul::first-letter{
+  font-size: 6.0;
+  font-weight: bold;
+  color: cornflowerblue;
+}
