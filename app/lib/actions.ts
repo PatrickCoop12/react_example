@@ -19,6 +19,7 @@ const FormSchema = z.object({
 });
 
 const CreateInvoice= FormSchema.omit({id: true, date: true});
+const UpdateInvoice = FormSchema.omit({ id: true, date: true });
 
 export type State = {
     errors?: {
@@ -63,7 +64,6 @@ export async function createInvoice(prevState: State, formData: FormData) {
     redirect('/dashboard/invoices')
 }
 
-const UpdateInvoice = FormSchema.omit({ id: true, date: true });
 export async function updateInvoice(prevstate: State, id: string, formData: FormData) {
   const validatedFields = UpdateInvoice.safeParse({
     customerId: formData.get('customerId'),
